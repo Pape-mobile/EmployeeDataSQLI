@@ -6,6 +6,7 @@ import androidx.paging.PagingData
 import com.sakine.employeesdata.models.EmployeeInfo
 import com.sakine.employeesdata.repository.EmployeeRepository
 import org.junit.Assert.assertNotNull
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -38,6 +39,7 @@ class EmployeeViewModelTest {
         val pagingDataList = listOf(employeeInfo)
         pagingEmployeeData.value = PagingData.from(pagingDataList)
 
+        assertTrue(pagingDataList.isNotEmpty())
         assertNotNull(pagingEmployeeData.value)
         assertNotNull(employeeList)
     }
