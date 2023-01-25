@@ -11,7 +11,7 @@ class RetrofitInstance {
     companion object{
         private val retrofit by lazy {
             val logging = HttpLoggingInterceptor().apply {
-                level = HttpLoggingInterceptor.Level.BODY
+                level = HttpLoggingInterceptor.Level.BASIC
             }
 
             val client = OkHttpClient.Builder()
