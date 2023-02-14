@@ -57,6 +57,8 @@ class EmployeeAdapter :
 
     override fun onBindViewHolder(holder: EmployeeViewHolder, position: Int) {
         val employeeInfo = getItem(position)
-        holder.showEmployeeData(employeeInfo!!)
+        if (employeeInfo != null) {
+            holder.showEmployeeData(employeeInfo)
+        }
     }
 }
